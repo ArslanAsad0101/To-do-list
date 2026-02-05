@@ -2,12 +2,12 @@ let taskList = [];
 
 const addToObj = () => {
     const task = {
-        id: Date.now(),  // Add unique ID
+        id: Date.now(),  
         name: document.getElementById('n').value,
         description: document.getElementById('d').value,
         date: document.getElementById('date').value,
-        startTime: document.getElementById('s').value,  // Changed to match display
-        endTime: document.getElementById('e').value     // Changed to match display
+        startTime: document.getElementById('s').value, 
+        endTime: document.getElementById('e').value     
     };
     taskList.push(task);
     clearInputs();
@@ -18,7 +18,7 @@ function displayTasks() {
     const taskContainer = document.getElementById('taskContainer');
     taskContainer.innerHTML = '';
 
-    taskList.forEach(task => {  // Changed from tasks to taskList
+    taskList.forEach(task => {  
         const taskElement = `
             <div class="task-card">
                 <h3>${task.name}</h3>
@@ -44,4 +44,5 @@ const clearInputs = () => {
     document.getElementById('date').value = '';
     document.getElementById('s').value = '';
     document.getElementById('e').value = '';
+
 }
